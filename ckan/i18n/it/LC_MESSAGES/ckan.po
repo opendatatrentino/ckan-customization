@@ -4210,3 +4210,7 @@ msgstr "Le categoria di dati sono raggruppamenti di tipologie di dati volti a si
 msgid "Largest Categories"
 msgstr "Categorie più numerose"
 
+#: index.html
+msgid "Categories"
+msgstr "Categorie"
+
