@@ -1,0 +1,50 @@
+<html xmlns:py="http://genshi.edgewall.org/"
+      xmlns:i18n="http://genshi.edgewall.org/i18n"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      py:strip=""
+      >
+
+    <py:def function="body_class">${h.literal('no-sidebar')}</py:def>
+
+    <py:def function="page_title">Credits</py:def>
+    <div py:match="//div[@id='content']" class="credits">
+        <div>
+            <h1 class="page_heading">Credits</h1>   
+        </div>
+        <div class="row">
+            <div class="span4">
+                <img src="/images/logo-regione-small.png" />
+            </div>
+            <div class="span8">
+                <h3>Regione Toscana</h3>
+                <p>
+                    Regione Toscana - Settore Infrastrutture e Tecnologie<br />
+Responsabile del settore: Ing. Laura Castellani<br />
+Responsabile del progetto: dott. Walter Volpi</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <img src="/images/spazio-dati.png" />
+            </div>
+            <div class="span8">
+                <h3>SpazioDati</h3>
+                <p>
+                    Realizzazione a cura di SpazioDati Srl - <a href="http://spaziodati.eu/">http://spaziodati.eu/</a><br /><br /></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <img src="/images/ckan.png" />
+            </div>
+            <div class="span8">
+                <h3>CKAN</h3>
+                <p>
+                   Powered by CKAN - <a href="http://ckan.org/">http://ckan.org.eu/</a><br /><br /></p>
+            </div>
+        </div>
+     
+    </div>
+    <xi:include href="layout.html" />
+</html>
+

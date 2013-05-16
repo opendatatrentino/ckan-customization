@@ -1,0 +1,230 @@
+header.container a img#logo{
+	width:242px;
+	height:80px;
+	/*background: url("http://sites.local/trentino2.png") no-repeat;*/
+}
+
+header #site-name{
+font-size:2em;
+padding-left:250px;
+}
+
+header .menu{
+margin-left:250px;
+}
+
+header .menu.account{
+background:#cbd300;
+}
+
+header .menu .ckan-logged-out a:hover{
+    border-bottom:3px solid transparent
+}
+header #site-name a
+{
+   color: #0082a4
+}
+header #site-name a:hover
+{
+    color:#0492d0
+}
+
+header .menu a{
+border-right:0;
+color:#fff;
+text-shadow:none
+}
+header .menu a:hover
+{
+    border-bottom:3px solid #83b817
+}
+.header.outer{
+border-top: 10px solid #cbd300;
+background:#fff;
+}
+
+header .menu{
+    background:#0082a4;
+}
+.beta{
+   display:none;
+}
+
+/*CONTENT*/
+
+body.index.home .front-page .action-box
+{
+background:#EAEAEA;
+border:1px solid #0082A4;
+
+}
+body.index.home .front-page .action-box h1,
+body.index.home .front-page .action-box-inner{
+    color:#0082A4;
+}
+/* body.index.home .front-page .span12 h2{ */
+body.index.home .front-page h2{
+    background:#0082A4;
+    color:#fff;
+    border-bottom: 2px solid #0082A4;
+}
+body.index.home .front-page .action-box h1{
+border-bottom:4px solid #0082A4;
+}
+.largest-groups .span4 {
+margin: 0;
+}
+ul#tags li a{
+color:#0082A4 !important;
+}
+body.index.home .front-page .row .span4:nth-child(1) .group h3{
+    border-bottom:2px solid #CED521;
+}
+body.index.home .front-page .row .span4:nth-child(2) .group h3{
+border-bottom:2px solid #0082A4;
+}
+body.index.home .front-page .row .span4:nth-child(3) .group h3{
+border-bottom:2px solid #6FB22C;
+}
+body.index.home .front-page .row .span4:nth-child(4) .group h3{
+    border-bottom:2px solid #CED521;
+}
+body.index.home .front-page .row .span4:nth-child(5) .group h3{
+border-bottom:2px solid #6FB22C;
+}
+body.index.home .front-page .row .span4:nth-child(6) .group h3{
+border-bottom:2px solid #0096D2;
+}
+
+ul.nav-pills li img{
+ max-width:none;
+ font-weight:bold;
+}
+
+#sidebar h2, #sidebar h3,
+.page_heading{
+color:#0082A4
+}
+
+a, a:visited{
+color:#0082A4;
+}
+#minornavigation .nav > li > a{
+color:#fff;
+}
+#minornavigation .nav > li.active > a,
+#minornavigation .nav > li > a:hover
+{
+color:#333;
+}
+#minornavigation .nav{
+background-image:none;
+background:#CBD300;
+filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+}
+
+#group-revisions table th,
+table.groups tr th{
+background:#59a2b5;
+color:#fff;
+}
+table.groups tr th:nth-child(1){
+    background:#0096D2;
+}
+table.groups tr th:nth-child(2){
+    background:#59a2b5;
+}
+table.groups tr th:nth-child(3){
+    background:#00638f;
+}
+body.index.home .front-page .groups-row{
+    border-bottom:2px solid #0082A4;
+}
+ul.datasets ul.dataset_formats li a{
+color:#fff;
+}
+ul.datasets ul.dataset_formats li{
+background:#CBD300;
+}
+body.package.read .tags li, body.package.read .groups li{
+background:#59a2b5;
+}
+body.package.read .tags li:hover, body.package.read .groups li:hover{
+background:#0082A4
+}
+body.package.read .tags a, body.package.read .groups a{
+color:#fff;
+}
+/*FOOTER*/
+.footer.outer
+{
+    background:#161616;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+}
+footer h3{
+text-shadow:0 1px 1px #444;
+}
+footer li a,footer li a:hover, footer li a:visited {
+color:#ddf5fb;
+}
+footer #credits a{
+    color:#fff;
+}
+footer #credits{
+    	background: url("/images/provincia.png") right top no-repeat;    	
+    	color:#fff;
+    	font-size:10px;
+    	padding-top: 120px;
+    	text-align:right;    	
+}
+
+/* TWITTER */
+
+body.index.home .front-page h1.twitter-logo {
+    background: url("../images/twitter-icon.png") bottom right no-repeat;
+    color: #fff;
+    padding: 3px 20px 2px;
+    margin-right: 20px;
+    border-bottom: 0;
+}
+
+.twitter-header h2 a {
+    color: white;
+}
+
+body.index.home .front-page .twitter-box {
+    margin-left: 15px;
+}
+
+body.index.home .front-page ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+body.index.home .front-page .twitter-box ul {
+    margin: 9px;
+}
+
+body.index.home .front-page ul li {
+    margin-bottom: 10px;
+}
+
+body.index.home .front-page .twitter-box ul li em, body.index.home .front-page .twitter-box ul li em a {
+    font-style: normal;
+    color: #0096D2;
+    font-weight: normal;
+}
+
+body.index.home .front-page .twitter-box h4 {
+    font-weight: 600;
+    margin: 0;
+}
+
+body.index.home .front-page .twitter-box .tw-user {
+    float: left;
+    width: 34px;
+}
+
+body.index.home .front-page .twitter-box .tweet {
+    margin-left: 45px;
+}

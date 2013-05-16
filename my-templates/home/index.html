@@ -1,0 +1,134 @@
+<html xmlns:py="http://genshi.edgewall.org/"
+  xmlns:i18n="http://genshi.edgewall.org/i18n"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  py:strip=""
+  >
+
+  <py:def function="body_class">${h.literal('no-sidebar')}</py:def>
+ 
+  <py:def function="page_title">Welcome</py:def>
+
+  <div py:match="//div[@id='content']" class="front-page">
+    <!--<div>
+      <h1 class="page_heading">Welcome to ${g.site_title}!</h1>
+    </div>-->
+	
+	<div class="row">
+        <div class="span12 slider-wrapper">
+            <div id="slider" class="nivoSlider">
+                <a href="/organization/meteo?q=meteo"> <img src="/images/slider-01.jpg" alt="Meteo" /></a>
+                <a href="/tag/prodotti%20tipici"> <img src="/images/slider-02.jpg" alt="Prodotti Trentini" /></a>
+                <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#100;&#097;&#116;&#105;&#046;&#116;&#114;&#101;&#110;&#116;&#105;&#110;&#111;&#046;&#105;&#116;"> <img src="/images/slider-03.jpg" alt="Scrivici" /></a>
+            </div>
+        </div>
+    </div> <!-- row -->
+	
+    <div class="row">
+      <div class="span6">
+        <div class="action-box">
+          <div class="action-box-inner find">
+            <h1>Find data</h1>
+
+            <form action="${h.url_for(controller='package', action='search')}" method="GET"> 
+              <input name="q" value="" class="search-field" placeholder="${_('Find datasets')}" /> 
+            </form> 
+            ${g.site_title} contains <a href="${h.url_for(controller='package', action='search')}">${c.package_count} datasets</a> che puoi cercare, esplorare e utilizzare. 
+          </div>
+        </div>
+      </div>
+      <div class="span6">
+        <div class="action-box">
+          	<div class="action-box-inner collaborate">
+                <py:if test="len(c.facets.get('tags', {}))">
+                    <div class="tag-cloud-header">
+                        <h1 class="tag-cloud">Top Tags</h1>
+                    </div>
+                    <script src="/scripts/jquery.js" type="text/javascript"></script>
+
+
+                    <ul id="tags">
+                        <?python
+                            tagListTemp = c.facets.get('tags', {}).items()
+                            tagListTemp = sorted(tagListTemp, key=lambda x: x[1])
+                            tagListTemp.reverse()
+                            tagListTemp = tagListTemp[:25]
+                            tagListTemp = sorted(tagListTemp, key=lambda x: x[0].lower())
+                        ?>
+                        <py:for each="tag_name, count in tagListTemp">
+                            <li value="${count}" title="${tag_name}"><a  href="${h.url_for(controller='tag',
+                                                                         action='read', id=tag_name)}">${tag_name}</a></li>
+
+                        </py:for>
+                    </ul>
+                    <!-- script type="text/javascript">
+                        $("#tags").tagcloud({type:"list",height:212,colormin:"5b5b5b",colormax:"5b5b5b"});
+                        $("#tags").ellipsis({ellipsis:""});
+                         $(".top-boxes .action-box").ellipsis({ellipsis:"..."});
+                    </script -->
+                </py:if>
+            </div>
+        </div>
+      </div>
+    </div>
+   <div class="groups-row">
+ 	<div py:if="c.categories" class="row whoelse">
+      <div class="largest-groups-header span8">
+        <h2>Largest Categories</h2>sfsd
+      </div>
+      <div class="twitter-header span4">
+        <h2><a href="http://twitter.com/DatiTrentinoit">Seguici su Twitter</a></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="largest-groups span8">
+      <py:for each="i, category_dict in enumerate(c.categories[:6])">
+        <div class="span4">
+          <div class="group">
+            <h3><a href="${h.url_for('category/' + str(category_dict['id']))}">${category_dict['display_name']}</a></h3>
+            <strong>${category_dict['display_name']} has ${category_dict['packages']} datasets.</strong>
+          </div>
+        </div>
+      </py:for>
+      </div>
+      <div class="twitter-box span4">
+        <xi:include href="twitterstream.html" />
+      </div>
+    </div>
+</div>
+  </div>
+  <xi:include href="layout.html" />
+<script type="text/javascript" src="/scripts/jquery.tagcloud.js"></script>
+ <script type="text/javascript" charset="utf-8">
+   $(document).ready(function(){
+     $.fn.tagcloud.defaults = {
+       size: {start: 14, end: 36, unit: "pt"},
+       color: {start: '#af8', end: '#f52'}
+     };
+     $("#tagcloud a").tagcloud();
+   })
+ </script>
+<script type="text/javascript">
+$(document).ready(function(){
+         $("#tags").tagcloud({type:"list",height:212,colormin:"5b5b5b",colormax:"5b5b5b"});
+                                $("#tags").ellipsis({ellipsis:""});
+                                 $(".top-boxes .action-box").ellipsis({ellipsis:"..."})
+});
+</script>
+<script type="text/javascript">
+                    $(window).load(function(){
+                        $('#slider').nivoSlider(
+                        {
+                            effect:'fold',
+							controlNav: true,
+                            directionNavHide:false,
+                            animSpeed:1500,
+							pauseTime: 5000
+                        })
+                    });
+</script>
+ <script type="text/javascript" src="/scripts/jquery.nivo.slider.pack.js"></script>
+ <script src="/scripts/jquery.tinysort.min.js"  type="text/javascript"></script>
+ <script type="text/javascript" src="/scripts/jquery.autoellipsis-1.0.6.min.js"></script>
+ <script src="/scripts/jquery.tagcloud.min.js"  type="text/javascript"></script>
+</html>
+
