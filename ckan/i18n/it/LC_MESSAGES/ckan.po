@@ -4205,3 +4205,7 @@ msgstr "Cosa sono le categorie?"
 msgid ""
 "Data categories are..."
 msgstr "Le categoria di dati sono raggruppamenti di tipologie di dati volti a sintetizzarne l'ambito di utilizzo applicativo, specifico di settori economici e/o funzionali."
+
+#:index.html
+msgid "Largest Categories?"
+msgstr "Categorie pi&ugrave; numerose"
