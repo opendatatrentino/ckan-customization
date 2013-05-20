@@ -72,7 +72,7 @@ def parse_tweet(tweet):
 try:
     twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
     search_results = twitter.search(q=searchString, lang="it", rpp=4)
-    res = search_results['statuses'][:4]
+    res = search_results['statuses'][:3]
 except TwythonError as e:
     print e
 

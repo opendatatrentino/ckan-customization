@@ -71,7 +71,7 @@ def parse_tweet(tweet):
 try:
     twitter = Twython()
     search_results = twitter.search(q=searchString, lang="it", page="1")
-    res = search_results['results'][:4]
+    res = search_results['results'][:3]
 except:
     res = [{u'text': u'RT @TechEcon: @stefanoepifani @diritto2punto0 OpenLinks #3: Italia, Canada, Cile, Stati Uniti e India per l\u2019Open government #opendata http://t.co/joPb1xmo', 
         u'from_user_name': u'Angela Creta', 
