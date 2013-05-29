@@ -10,6 +10,8 @@
 # Maurizio Napolitano <maurizio.napolitano@okfn.org>, 2011, 2012.
 # Sean Hammond <sean.hammond@okfn.org>, 2012.
 # Stefano Costa <steko@iosa.it>, 2011, 2012.
+# Marcello Serenetti <m.serenetti@hyperborea.com> 2012,2013.
+# Ivan Ricotti <i.ricotti@hyperborea.com> 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: CKAN\n"
@@ -206,7 +208,7 @@ msgstr "Non sei autorizzato a leggere %s"
 #: ckan/controllers/authorization_group.py:66 ckan/controllers/group.py:238
 #: ckan/controllers/group_formalchemy.py:36
 msgid "Unauthorized to create a group"
-msgstr "Non sei autorizzato a creare un gruppo"
+msgstr "Non sei autorizzato a creare un'organizzazione"
 
 #: ckan/controllers/authorization_group.py:117 ckan/controllers/group.py:409
 #, python-format
@@ -243,7 +245,7 @@ msgstr "Non sei autorizzato a leggere la risorsa %s"
 #: ckan/controllers/group.py:313 ckan/controllers/group.py:345
 #, python-format
 msgid "Unauthorized to read group %s"
-msgstr "Non sei autorizzato a leggere il gruppo %s"
+msgstr "Non sei autorizzato a leggere l'organizzazione %s"
 
 #: ckan/controllers/group.py:126
 msgid "Cannot render description"
@@ -262,7 +264,7 @@ msgstr "Selezionare due revisioni prima di effettuare il confronto"
 
 #: ckan/controllers/group.py:416
 msgid "CKAN Group Revision History"
-msgstr "Cronologia delle modifiche nel gruppo"
+msgstr "Cronologia delle modifiche nell'organizzazione"
 
 #: ckan/controllers/group.py:419
 msgid "Recent changes to CKAN Group: "
@@ -480,7 +482,7 @@ msgstr "Nome"
 
 #: ckan/forms/authorization_group.py:46
 msgid "<strong>Unique identifier</strong> for group."
-msgstr "<strong>Identificatore unico</strong> per il gruppo."
+msgstr "<strong>Identificatore unico</strong> per l'organizzazione."
 
 #: ckan/forms/authorization_group.py:47 ckan/forms/package.py:41
 #: ckan/templates/group/new_group_form.html:36
@@ -519,7 +521,7 @@ msgstr "Questo nome di dataset esiste già in catalogo"
 
 #: ckan/forms/common.py:54 ckan/logic/validators.py:284
 msgid "Group name already exists in database"
-msgstr "Un gruppo con questo nome esiste già nel database"
+msgstr "Un'organizzazione con questo nome esiste già nel database"
 
 #: ckan/forms/common.py:143
 #, python-format
@@ -560,13 +562,13 @@ msgstr "Coppia extra di chiave-valore: la chiave non è impostata per il valore 
 #: ckan/forms/common.py:781 ckan/templates/package/new_package_form.html:116
 #: ckanext/publisher_form/templates/dataset_form.html:148
 msgid "Cannot add any groups."
-msgstr "Impossibile aggiungere gruppi."
+msgstr "Impossibile aggiungere organizzazioni."
 
 #: ckan/forms/common.py:796 ckan/logic/validators.py:125
 #: ckanext/publisher_form/templates/dataset_form.html:139
 #: ckanext/stats/templates/ckanext/stats/index.html:82
 msgid "Group"
-msgstr "Gruppo"
+msgstr "Organizzazione"
 
 #: ckan/forms/common.py:826
 #, python-format
@@ -642,7 +644,7 @@ msgstr "es. http://www.example.com/growth-figures.html"
 msgid ""
 "The name of the main contact, for enquiries about this particular dataset, "
 "using the e-mail address in the following field."
-msgstr "Il nome dell'autore principale (persona o gruppo): per richieste specifiche su questi dati utilizza l'e-mail fornita nel campo successivo."
+msgstr "Il nome dell'autore principale (persona o organizzazione): per richieste specifiche su questi dati utilizza l'e-mail fornita nel campo successivo."
 
 #: ckan/forms/package.py:59 ckan/templates/package/new_package_form.html:212
 #: ckanext/organizations/templates/organization_package_form.html:220
@@ -650,7 +652,7 @@ msgstr "Il nome dell'autore principale (persona o gruppo): per richieste specifi
 msgid ""
 "If there is another important contact person (in addition to the person in "
 "the Author field) then provide details here."
-msgstr "Se c'è un'altra persona o gruppo oltre all'autore principale che si occupa della manutenzione di questi dati, puoi inserire il nome qui."
+msgstr "Se c'è un'altra persona o organizzazione oltre all'autore principale che si occupa della manutenzione di questi dati, puoi inserire il nome qui."
 
 #: ckan/forms/package.py:63 ckan/templates/package/resource_read.html:106
 msgid "Licence"
@@ -749,7 +751,7 @@ msgstr "Risorse"
 #: ckan/templates/revision/read.html:64
 #: ckanext/publisher_form/templates/dataset_form.html:124
 msgid "Groups"
-msgstr "Gruppi"
+msgstr "Organizzazioni"
 
 #: ckan/forms/package.py:98 ckan/forms/package.py:105
 msgid "Detail"
@@ -988,7 +990,7 @@ msgstr "Correlazioni"
 
 #: ckan/logic/validators.py:149
 msgid "That group name or ID does not exist."
-msgstr "Il nome del gruppo o l'ID non esistono."
+msgstr "Il nome dell'organizzazione o l'ID non esistono."
 
 #: ckan/logic/validators.py:161
 msgid "Activity type"
@@ -1213,7 +1215,7 @@ msgstr "L'utente %s non è autorizzato a creare pacchetti"
 #: ckan/logic/auth/create.py:16 ckan/logic/auth/update.py:23
 #, python-format
 msgid "User %s not authorized to edit these groups"
-msgstr "L'utente %s non è autorizzato a modificare questi gruppi"
+msgstr "L'utente %s non è autorizzato a modificare queste organizzazioni"
 
 #: ckan/logic/auth/create.py:34
 msgid "You must be a sysadmin to create a featured related item"
@@ -1236,7 +1238,7 @@ msgstr "L'utente %s non è autorizzato a modificare questi pacchetti"
 #: ckan/logic/auth/publisher/create.py:113
 #, python-format
 msgid "User %s not authorized to create groups"
-msgstr "L'utente %s non è autorizzato a creare gruppi"
+msgstr "L'utente %s non è autorizzato a creare organizzazioni"
 
 #: ckan/logic/auth/create.py:86
 #, python-format
@@ -1250,7 +1252,7 @@ msgstr "L'utente %s non è autorizzato a creare utenti"
 
 #: ckan/logic/auth/create.py:129
 msgid "Group was not found."
-msgstr "Gruppo non trovato."
+msgstr "Organizzazione non trovata."
 
 #: ckan/logic/auth/create.py:149 ckan/logic/auth/publisher/create.py:135
 msgid "Valid API key needed to create a package"
@@ -1279,7 +1281,7 @@ msgstr "L'utente %s non è autorizzato a eliminare la relazione %s"
 #: ckan/logic/auth/delete.py:67 ckan/logic/auth/publisher/delete.py:74
 #, python-format
 msgid "User %s not authorized to delete group %s"
-msgstr "L'utente %s non è autorizzato a eliminare il gruppo %s"
+msgstr "L'utente %s non è autorizzato a eliminare l'organizzazione %s"
 
 #: ckan/logic/auth/delete.py:82 ckan/logic/auth/publisher/delete.py:90
 #, python-format
@@ -1309,7 +1311,7 @@ msgstr "L'utente %s non è autorizzato a leggere la risorsa %s"
 #: ckan/logic/auth/get.py:131
 #, python-format
 msgid "User %s not authorized to read group %s"
-msgstr "L'utente %s non è autorizzato a leggere il gruppo %s"
+msgstr "L'utente %s non è autorizzato a leggere l'organizzazione %s"
 
 #: ckan/logic/auth/update.py:19
 #, python-format
@@ -1334,7 +1336,7 @@ msgstr "L'utente %s non è autorizzato a modificare i permessi del pacchetto %s"
 #: ckan/logic/auth/update.py:81
 #, python-format
 msgid "User %s not authorized to edit group %s"
-msgstr "L'utente %s non è autorizzato a modificare il gruppo %s"
+msgstr "L'utente %s non è autorizzato a modificare l'organizzazione %s"
 
 #: ckan/logic/auth/update.py:89 ckan/logic/auth/update.py:94
 #: ckan/logic/auth/publisher/update.py:95
@@ -1349,12 +1351,12 @@ msgstr "Devi essere un amministratore di sistema per modificare un campo di un e
 #: ckan/logic/auth/update.py:115
 #, python-format
 msgid "User %s not authorized to change state of group %s"
-msgstr "L'utente %s non è autorizzato a cambiare lo stato del gruppo %s"
+msgstr "L'utente %s non è autorizzato a cambiare lo stato dell'organizzazione %s"
 
 #: ckan/logic/auth/update.py:126
 #, python-format
 msgid "User %s not authorized to edit permissions of group %s"
-msgstr "L'utente %s non è autorizzato a modificare i permessi del gruppo %s"
+msgstr "L'utente %s non è autorizzato a modificare i permessi dell'organizzazione %s"
 
 #: ckan/logic/auth/update.py:137 ckan/logic/auth/update.py:148
 #, python-format
@@ -1387,11 +1389,11 @@ msgstr "È necessaria una chiave API valida per modificare il pacchetto"
 
 #: ckan/logic/auth/update.py:216 ckan/logic/auth/publisher/update.py:182
 msgid "Valid API key needed to edit a group"
-msgstr "È necessaria una chiave API valida per modificare il gruppo"
+msgstr "È necessaria una chiave API valida per modificare l'organizzazione"
 
 #: ckan/logic/auth/publisher/create.py:21
 msgid "You must be logged in and be within a group to create a package"
-msgstr "Devi essere autenticato e appartenere ad un gruppo per creare un pacchetto"
+msgstr "Devi essere autenticato e appartenere ad un'organizzazione per creare un pacchetto"
 
 #: ckan/logic/auth/publisher/create.py:40
 msgid "You do not have permission to create an item"
@@ -1403,7 +1405,7 @@ msgstr "Sono richiesti due ID di pacchetti"
 
 #: ckan/logic/auth/publisher/create.py:95
 msgid "User is not authorized to create groups"
-msgstr "L'utente non è autorizzato a creare gruppi"
+msgstr "L'utente non è autorizzato a creare organizzazioni"
 
 #: ckan/logic/auth/publisher/create.py:118
 msgid "Authorization groups not implemented in this profile"
@@ -1412,12 +1414,12 @@ msgstr "I gruppi di autorizzazioni non sono implementati in questo profilo"
 #: ckan/logic/auth/publisher/delete.py:26
 #, python-format
 msgid "User %s not authorized to delete packages in these group"
-msgstr "L'utente %s non è autorizzato ad eliminare pacchetti in questi gruppi"
+msgstr "L'utente %s non è autorizzato ad eliminare pacchetti in queste organizzazioni"
 
 #: ckan/logic/auth/publisher/delete.py:65
 #: ckan/logic/auth/publisher/delete.py:70
 msgid "Only members of this group are authorized to delete this group"
-msgstr "Solo i membri del gruppo sono autorizzati a cancellarlo"
+msgstr "Solo i membri dell'organizzazione sono autorizzati a cancellarla"
 
 #: ckan/logic/auth/publisher/get.py:82
 #, python-format
@@ -1427,12 +1429,12 @@ msgstr "L'utente non è autorizzato a leggere il pacchetto %s"
 #: ckan/logic/auth/publisher/get.py:139
 #, python-format
 msgid "User %s not authorized to show group %s"
-msgstr "L'utente %s non è autorizzato a mostrare il gruppo %s"
+msgstr "L'utente %s non è autorizzato a mostrare l'organizzazione %s"
 
 #: ckan/logic/auth/publisher/update.py:29
 #, python-format
 msgid "User %s not authorized to edit packages in these groups"
-msgstr "L'utente %s non è autorizzato a modificare i pacchetti in questi gruppi"
+msgstr "L'utente %s non è autorizzato a modificare i pacchetti in queste organizzazioni"
 
 #: ckan/logic/auth/publisher/update.py:47
 #: ckan/logic/auth/publisher/update.py:50
@@ -1446,7 +1448,7 @@ msgstr "I permessi di modifica del pacchetto non sono disponibili"
 
 #: ckan/logic/auth/publisher/update.py:74
 msgid "Only members of this group are authorized to edit this group"
-msgstr "Solo i membri del gruppo sono autorizzati a modificarlo"
+msgstr "Solo i membri dell'organizzazione sono autorizzati a modificarla"
 
 #: ckan/logic/auth/publisher/update.py:83
 #, python-format
@@ -1456,11 +1458,11 @@ msgstr "Utente %s non trovato"
 #: ckan/logic/auth/publisher/update.py:87
 #, python-format
 msgid "User %s not authorized to edit this group"
-msgstr "L'utente %s non è autorizzato a editare questo gruppo"
+msgstr "L'utente %s non è autorizzato a editare questa organizzazione"
 
 #: ckan/logic/auth/publisher/update.py:108
 msgid "Group edit permissions is not implemented"
-msgstr "I permessi per la modifica dei gruppi non sono implementati"
+msgstr "I permessi per la modifica delle organizzazioni non sono implementati"
 
 #: ckan/logic/auth/publisher/update.py:111
 #: ckan/logic/auth/publisher/update.py:115
@@ -1703,7 +1705,7 @@ msgstr "Aggiungi un dataset"
 
 #: ckan/templates/js_strings.html:16
 msgid "Add Group"
-msgstr "Aggiungi un gruppo"
+msgstr "Aggiungi un'organizzazione"
 
 #: ckan/templates/js_strings.html:16
 msgid ""
@@ -2048,7 +2050,7 @@ msgstr "{actor} ha aggiunto il tag {object} al dataset {target}"
 
 #: ckan/templates/activity_streams/changed_group.html:8
 msgid "{actor} updated the group {object}"
-msgstr "{actor} ha aggiornato il gruppo {object}"
+msgstr "{actor} ha aggiornato l'organizzazione {object}"
 
 #: ckan/templates/activity_streams/changed_package.html:8
 msgid "{actor} updated the dataset {object}"
@@ -2068,7 +2070,7 @@ msgstr "{actor} ha aggiornato il suo profilo"
 
 #: ckan/templates/activity_streams/deleted_group.html:8
 msgid "{actor} deleted the group {object}"
-msgstr "{actor} ha eliminato il gruppo {object}"
+msgstr "{actor} ha eliminato l'organizzazione {object}"
 
 #: ckan/templates/activity_streams/deleted_package.html:8
 msgid "{actor} deleted the dataset {object}"
@@ -2093,7 +2095,7 @@ msgstr "{actor} ha cominciato a seguire {object}"
 
 #: ckan/templates/activity_streams/new_group.html:8
 msgid "{actor} created the group {object}"
-msgstr "{actor} ha creato il gruppo {object}"
+msgstr "{actor} ha creato l'organizzazione {object}"
 
 #: ckan/templates/activity_streams/new_package.html:8
 msgid "{actor} created the dataset {object}"
@@ -2260,7 +2262,7 @@ msgstr "Modifica:"
 
 #: ckan/templates/authorization_group/edit_form.html:23
 msgid "There are no users currently in this group."
-msgstr "Non ci sono utenti in questo gruppo per il momento."
+msgstr "Non ci sono utenti in questa organizzazione per il momento."
 
 #: ckan/templates/authorization_group/index.html:6
 #: ckan/templates/authorization_group/index.html:7
@@ -2294,11 +2296,11 @@ msgid ""
 "Instead of specifying the privileges of specific users on a dataset or group,\n"
 "          you can also specify a set of users that will share the same rights. To do that, an    \n"
 "          [1:authorization group] can be set-up and users can be added to it."
-msgstr "Invece di specificare i privilegi di un singolo utente su un dataset o un gruppo,\n          puoi indicare un insieme di utenti che condivideranno gli stessi diritti. Per fare questo,\n          devi creare un [1:gruppo di utenti] e poi aggiungervi gli utenti."
+msgstr "Invece di specificare i privilegi di un singolo utente su un dataset o un'organizzazione,\n          puoi indicare un insieme di utenti che condivideranno gli stessi diritti. Per fare questo,\n          devi creare un [1:organizzzazione di utenti] e poi aggiungervi gli utenti."
 
 #: ckan/templates/authorization_group/layout.html:32
 msgid "To create a new authorization group, please first [1:login]."
-msgstr "Per creare un gruppo di utenti, per favore [1:effettua l'accesso]."
+msgstr "Per creare un'organizzazione di utenti, per favore [1:effettua l'accesso]."
 
 #: ckan/templates/authorization_group/layout.html:36
 msgid "Create a new authorization group"
@@ -2343,7 +2345,7 @@ msgstr "Dataset"
 #: ckan/templates/group/edit_form.html:17
 #: ckan/templates/group/new_group_form.html:114
 msgid "There are no datasets currently in this group."
-msgstr "Non ci sono dataset in questo gruppo, per ora."
+msgstr "Non ci sono dataset in questa organizzazione, per ora."
 
 #: ckan/templates/group/history.html:5 ckan/templates/group/history.html:6
 #: ckan/templates/package/history.html:7
@@ -2384,15 +2386,16 @@ msgstr "Confronta »"
 
 #: ckan/templates/group/history.html:54
 msgid "Group History"
-msgstr "Cronologia del gruppo di utenti"
+msgstr "Cronologia dell'organizzazione di utenti"
 
 #: ckan/templates/group/index.html:6 ckan/templates/group/index.html:7
 msgid "Groups of Datasets"
-msgstr "Gruppi di dataset"
+#msgstr "Gruppi di dataset"
+msgstr "Organizzazioni"
 
 #: ckan/templates/group/index.html:11
 msgid "What Are Groups?"
-msgstr "Cosa sono i gruppi?"
+msgstr "Cosa sono le Organizzazioni?"
 
 #: ckan/templates/group/index.html:12
 msgid ""
@@ -2400,7 +2403,7 @@ msgid ""
 "when you want to restrict users from editing a collection. A [1:group] can "
 "be set-up to specify which users have permission to add or remove datasets "
 "from it."
-msgstr "Un gruppo individua e raccoglie le informazioni in relazione al settore di riferimento, alla tipologia di dato e alla loro provenienza istituzionale."
+msgstr "Un'organizzazione individua e raccoglie le informazioni in relazione alla loro provenienza istituzionale."
 
 #: ckan/templates/group/layout.html:13 ckan/templates/package/layout.html:38
 #: ckanext/organizations/templates/organization_layout.html:19
@@ -2420,19 +2423,19 @@ msgstr "Dataset esistente..."
 
 #: ckan/templates/group/layout.html:32
 msgid "List Groups"
-msgstr "Elenca i gruppi"
+msgstr "Elenca le Organizzazione"
 
 #: ckan/templates/group/layout.html:35
 msgid "Add a Group"
-msgstr "Aggiungi un gruppo"
+msgstr "Aggiungi un'organizzazione"
 
 #: ckan/templates/group/layout.html:38
 msgid "Login to Add a Group"
-msgstr "Fare login per aggiungere un gruppo"
+msgstr "Fare login per aggiungere un'organizzazione"
 
 #: ckan/templates/group/new.html:5 ckan/templates/group/new.html:6
 msgid "Add A Group"
-msgstr "Aggiungi un gruppo"
+msgstr "Aggiungi un'organizzazione"
 
 #: ckan/templates/group/new_group_form.html:13
 #: ckan/templates/package/form.html:7
@@ -2485,7 +2488,7 @@ msgstr "URL dell'immagine:"
 
 #: ckan/templates/group/new_group_form.html:50
 msgid "The URL for the image that is associated with this group."
-msgstr "La URL dell'immagine che è associata a questo gruppo."
+msgstr "La URL dell'immagine che è associata a questa Organizzazione."
 
 #: ckan/templates/group/new_group_form.html:57
 #: ckan/templates/package/new_package_form.html:275
@@ -3556,7 +3559,7 @@ msgstr "Segui un altro utente"
 
 #: ckan/templates/user/dashboard.html:30
 msgid "Create a group or a tag"
-msgstr "Crea un gruppo o un tag"
+msgstr "Crea un'organizzazione o un tag"
 
 #: ckan/templates/user/dashboard.html:31
 msgid "Or simply browse the repository"
@@ -3864,7 +3867,7 @@ msgstr "C'è stato un problema con la tua proposta, per favore correggi e prova 
 
 #: ckanext/organizations/forms.py:29
 msgid "Please choose an organization to add the dataset to"
-msgstr "Per favore scegli un gruppo a cui aggiungere il dataset"
+msgstr "Per favore scegli un'organizzazione a cui aggiungere il dataset"
 
 #: ckanext/organizations/templates/organization_apply.html:6
 msgid "Apply for membership"
@@ -3883,7 +3886,7 @@ msgstr "Apps, Idee etc"
 msgid ""
 "Please explain to the owner your reasons for wishing to become an editor of "
 "this organization"
-msgstr "Per favore descrivi al proprietario le tue motivazioni per diventare un curatore di questo gruppo"
+msgstr "Per favore descrivi al proprietario le tue motivazioni per diventare un curatore di questa organizzazione"
 
 #: ckanext/organizations/templates/organization_apply_form.html:44
 msgid "Send request"
@@ -3891,7 +3894,7 @@ msgstr "Invia la richiesta"
 
 #: ckanext/organizations/templates/organization_form.html:50
 msgid "The URL for the image that is associated with this organization."
-msgstr "La URL dell'immagine associata a questo gruppo"
+msgstr "La URL dell'immagine associata a questa organizzazione"
 
 #: ckanext/organizations/templates/organization_form.html:65
 msgid "Parent Organization"
@@ -3899,7 +3902,7 @@ msgstr "Gruppo padre"
 
 #: ckanext/organizations/templates/organization_form.html:70
 msgid "No parent organization"
-msgstr "Nessun gruppo padre"
+msgstr "Nessuna organizzazione madre"
 
 #: ckanext/organizations/templates/organization_form.html:134
 msgid "Manage users"
@@ -3912,16 +3915,16 @@ msgstr "Non ci sono al momento utenti associati a questo editore."
 
 #: ckanext/organizations/templates/organization_history.html:54
 msgid "Organization History"
-msgstr "Storia del gruppo"
+msgstr "Storia dell'Organizzazione"
 
 #: ckanext/organizations/templates/organization_index.html:6
 #: ckanext/organizations/templates/organization_index.html:7
 msgid "Organizations"
-msgstr "Gruppi"
+msgstr "Organizzazioni"
 
 #: ckanext/organizations/templates/organization_index.html:11
 msgid "What Are Organizations?"
-msgstr "Cosa sono i gruppi?"
+msgstr "Cosa sono le Organizzazioni?"
 
 #: ckanext/organizations/templates/organization_index.html:12
 msgid ""
@@ -3929,7 +3932,7 @@ msgid ""
 "when you want to restrict users from editing a collection. An "
 "[1:organization] can be set-up to specify which users have permission to add"
 " or remove datasets from it."
-msgstr "Un gruppo individua e raccoglie le informazioni in relazione al settore di riferimento, alla tipologia di dato e alla loro provenienza istituzionale."
+msgstr "Un'Organizzazione individua e raccoglie le informazioni in relazione alla loro provenienza istituzionale."
 
 #: ckanext/organizations/templates/organization_layout.html:28
 msgid "Join"
@@ -3937,16 +3940,16 @@ msgstr "Aderisci"
 
 #: ckanext/organizations/templates/organization_layout.html:34
 msgid "List Organizations"
-msgstr "Lista dei gruppi"
+msgstr "Lista delle Organizzazioni"
 
 #: ckanext/organizations/templates/organization_layout.html:37
 msgid "Add an Organization"
-msgstr "Aggiungi un gruppo"
+msgstr "Aggiungi un'organizzazione"
 
 #: ckanext/organizations/templates/organization_new.html:5
 #: ckanext/organizations/templates/organization_new.html:6
 msgid "Add an organization"
-msgstr "Aggiungi un gruppo"
+msgstr "Aggiungi un'organizzazione"
 
 #: ckanext/organizations/templates/organization_package_form.html:115
 msgid "Public"
@@ -3958,7 +3961,7 @@ msgstr "Privato"
 
 #: ckanext/organizations/templates/organization_package_form.html:125
 msgid "Cannot add to any organizations. Please join an organization"
-msgstr "Non posso aggiungere a nessun gruppo. Per favore unisciti ad uno di essi"
+msgstr "Non posso aggiungere a nessuna organizzazione. Per favore unisciti ad uno di essi"
 
 #: ckanext/organizations/templates/organization_users.html:5
 #: ckanext/organizations/templates/organization_users.html:6
@@ -3977,14 +3980,14 @@ msgstr "Curatore"
 
 #: ckanext/organizations/templates/organization_users_form.html:34
 msgid "There are no users currently in this organization."
-msgstr "Non ci sono utenti al momento in questo gruppo"
+msgstr "Non ci sono utenti al momento in questa organizzazione"
 
 #: ckanext/organizations/templates/email/join_publisher_request.txt:1
 msgid ""
 "Dear administrator,\n"
 "\n"
 "A request has been made for membership of your organization"
-msgstr "Caro amministratore,\n\nÈ stata fatta una richiesta per entrare nel tuo gruppo"
+msgstr "Caro amministratore,\n\nÈ stata fatta una richiesta per entrare nella tua organizzazione"
 
 #: ckanext/organizations/templates/email/join_publisher_request.txt:3
 msgid "by"
@@ -4068,7 +4071,7 @@ msgid ""
 "when you want to restrict users from editing a collection. A [1:publisher] "
 "can be set-up to specify which users have permission to add or remove "
 "datasets from it."
-msgstr "Un gruppo individua e raccoglie le informazioni in relazione al settore di riferimento, alla tipologia di dato e alla loro provenienza istituzionale."
+msgstr "Un'organizzzazione individua e raccoglie le informazioni in relazione alla loro provenienza istituzionale."
 
 #: ckanext/publisher_form/templates/publisher_layout.html:41
 msgid "List Publishers"
@@ -4096,7 +4099,7 @@ msgstr "La classifica dei dataset CKAN"
 msgid ""
 "Choose a dataset attribute and find out which categories in that area have "
 "the most datasets. E.g. tags, groups, license, res_format, country."
-msgstr "Scegli un attributo del dataset e trova quali categorie in quell'area hanno più dataset. Esempio tag, gruppi, licenza, res_format, paese."
+msgstr "Scegli un attributo del dataset e trova quali categorie in quell'area hanno più dataset. Esempio tag, organizzazioni, licenza, res_format, paese."
 
 #: ckanext/stats/public/ckanext/stats/demo.html:15
 #: ckanext/stats/templates/ckanext/stats/leaderboard.html:20
@@ -4137,7 +4140,7 @@ msgstr "Numero di modifiche"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:80
 msgid "Largest Groups"
-msgstr "Gruppi più numerosi"
+msgstr "Organizzazioni più numerose"
 
 #: ckanext/stats/templates/ckanext/stats/index.html:88
 msgid "Top Tags"
