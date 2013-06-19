@@ -1,21 +1,36 @@
 #!/usr/bin/python
-
-from twython import Twython, TwythonError
-
 import re 
 import codecs
+import xml.parsers.expat,sys
+
+from glob import glob
+from shutil import copyfile
+from twython import Twython, TwythonError
+from xml.sax.saxutils import escape
 
 # -------------------------- #
 #          Parametri            
 # -------------------------- #
 
-APP_KEY='EtyftSKWzog9LjNE50g'
-APP_SECRET='7MptO9zzAz231diK75aFV2pu5nmxy9sefWCcZ7FJA'
-OAUTH_TOKEN='1417803013-8ubWGlXFiqahoipwqyJ1YapsR1ONbrz0oviyafs'
-OAUTH_TOKEN_SECRET='z1Uu2dPVwzphRz8imRZPIFoKSFO3m1fK3d5sw4SAL0Q'
+#APP_KEY='EtyftSKWzog9LjNE50g'
+#APP_SECRET='7MptO9zzAz231diK75aFV2pu5nmxy9sefWCcZ7FJA'
+#OAUTH_TOKEN='1417803013-8ubWGlXFiqahoipwqyJ1YapsR1ONbrz0oviyafs'
+#OAUTH_TOKEN_SECRET='z1Uu2dPVwzphRz8imRZPIFoKSFO3m1fK3d5sw4SAL0Q'
 
-searchString = u'#opendata'
-fileout = '/home/ckan/pyenv/src/ckan/my-templates/home/twitterstream.html'
+APP_KEY='DC6UDNmTJdce1K3SeUBVDQ'
+APP_SECRET='AoREEmVDxCFFRfYV3MenmVFA0w84Ywan08He49mM'
+OAUTH_TOKEN='1269644016-xBPukQhDwJ7rhIVv0orD6CjPA73nVLoX8UhxrD1'
+OAUTH_TOKEN_SECRET='GwHhcyHsXPduv11l944Jw5KV7SpyHg61pzED32Zs'
+
+NOFFEEDS=3
+
+#searchString = u'#opendata'
+#searchString = u'#opendata +exclude:retweets'
+#searchString = u'#opendataitaly OR #opendatatrentino OR opendata +exclude:retweets'
+searchString = u'#opendatatrentino OR #opendataitaly +exclude:retweets'
+
+tempfile = '/tmp/twittersnippet.html'
+outfile = '/home/ckan/pyenv/src/ckan/my-templates/home/twitterstream.html'
 
 hash_regex = re.compile(r'#[0-9a-zA-Z+_]*',re.IGNORECASE)   
 user_regex = re.compile(r'@[0-9a-zA-Z+_]*',re.IGNORECASE)  
@@ -36,7 +51,7 @@ templLi = u"""<li>
 # -------------------------- #
 
 def cleanText (string):
-    return (u' '.join(string.split()))
+    return escape(u' '.join(string.split()))
     
 
 # -------------------------- #
@@ -75,8 +90,9 @@ try:
     res = search_results['statuses'][:3]
 except TwythonError as e:
     print e
+    exit(1)
 
-fout = codecs.open(fileout, encoding='utf-8', mode='w') 
+fout = codecs.open(tempfile, encoding='utf-8', mode='w') 
 fout.write("<ul>\n")
 for item in res:
     out = templLi % (cleanText(item['user']['profile_image_url']), 
@@ -92,4 +108,12 @@ for item in res:
 fout.write("</ul>\n")
 fout.flush()
 fout.close()
+
+try:
+    parser = xml.parsers.expat.ParserCreate()
+    parser.ParseFile(open(tempfile, "r"))
+    print "%s is well-formed" % tempfile
+    copyfile(tempfile, outfile)
+except Exception, e:
+    print "%s is %s" % (tempfile, e)
 
